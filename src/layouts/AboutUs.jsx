@@ -69,9 +69,9 @@ export default function AboutUs() {
           <Typography
             sx={{
               fontWeight: 600,
-              fontSize: { xs: 25, md: 25 },
+              fontSize: { xs: 22, md: 22 },
               lineHeight: 1.3,
-              color: "royalblue"
+              color: "#2a3443"
             }}
           >
             Dr Ritwick Chaterjee

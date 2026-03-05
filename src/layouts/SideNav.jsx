@@ -74,7 +74,7 @@ export default function SideNav({
                 {/* Tagline */}
                 <Typography
                     sx={{
-                        fontSize: 10,
+                        fontSize: 11,
                         color: "#6b7a90",
                         letterSpacing: 0.4,
                         lineHeight: 1
