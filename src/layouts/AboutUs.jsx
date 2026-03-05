@@ -74,7 +74,9 @@ export default function AboutUs() {
               color: "royalblue"
             }}
           >
-            Aarambh Clinic
+            Dr Ritwick Chaterjee
+
+ 
             <br />
             
           </Typography>

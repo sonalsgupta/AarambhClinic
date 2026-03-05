@@ -42,7 +42,7 @@ export default function Login() {
       setLoading(true);
       setError("");
 
-      const response = await fetch("/api/login", {
+      const response = await fetch("https://clinicflow-five.vercel.app/api/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

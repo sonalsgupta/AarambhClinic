@@ -69,18 +69,7 @@ export default function SideNav({
                 />
 
                 {/* Logo Name */}
-                <Typography
-                    sx={{
-                        fontWeight: 800,
-                        fontSize: 20,
-                        letterSpacing: 0.5,
-                        color: "#123b72",
-                        lineHeight: 2
-                    }}
-                >
-                    Dr Ritwick Chaterjee
-
-                </Typography>
+           
 
                 {/* Tagline */}
                 <Typography
