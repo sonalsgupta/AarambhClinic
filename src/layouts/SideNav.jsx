@@ -85,13 +85,13 @@ export default function SideNav({
                 {/* Tagline */}
                 <Typography
                     sx={{
-                        fontSize: 11,
+                        fontSize: 10,
                         color: "#6b7a90",
                         letterSpacing: 0.4,
-                        lineHeight: 1.2
+                        lineHeight: 1
                     }}
                 >
-                    Aarambh Mental Health Clinic
+                    Beginning the journey to better mental health
                 </Typography>
 
             </Toolbar>
@@ -198,7 +198,7 @@ export default function SideNav({
                                                     </ListItemIcon>
                                                     <ListItemText
                                                         primary={
-                                                            <Typography sx={{ fontWeight: isChildActive ? 600  : 500, fontSize: 13}}>
+                                                            <Typography sx={{ fontWeight: isChildActive ? 600 : 500, fontSize: 13 }}>
                                                                 {child.label}
                                                             </Typography>
                                                         }

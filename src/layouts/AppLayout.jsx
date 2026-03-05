@@ -18,7 +18,7 @@ import {
 } from "@mui/icons-material";
 
 const navItems = [
-  { label: "Clinical Dashboard", icon: <DashboardIcon />, path: "/" },
+  { label: "Home", icon: <DashboardIcon />, path: "/" },
   { label: "New Patient Registration", icon: <PersonIcon />, path: "/newPatient/AddNewPatient" },
   {
     label: "Patients",

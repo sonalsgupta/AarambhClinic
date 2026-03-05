@@ -13,7 +13,7 @@ import {
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
-
+import loginBg from "../../styles/assets/images/balance.jpg";
 import { useNavigate, useLocation } from "react-router-dom";
 
 export default function Login() {
@@ -56,12 +56,9 @@ export default function Login() {
       const data = await response.json();
 
       if (data.success) {
-
         localStorage.setItem("isLoggedIn", "true");
         localStorage.setItem("username", username);
-
         navigate(from, { replace: true });
-
       } else {
         setError("Invalid username or password");
       }
@@ -78,52 +75,80 @@ export default function Login() {
       sx={{
         minHeight: "100vh",
         display: "flex",
+        flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        background:
-          "linear-gradient(135deg,#f9e7f7 0%, #e8f0ff 100%)"
+
+        backgroundImage: `linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url(${loginBg})`,
+
+        backgroundSize: "cover",
+        backgroundPosition: "center"
       }}
     >
 
+      {/* Banner Section */}
+      <Box
+        sx={{
+          textAlign: "center",
+          mb: 4,
+          px: 3
+        }}
+      >
+
+
+
+        <Typography
+          variant="h5"
+          sx={{
+            color: "#1976d2",
+            fontWeight: 500
+          }}
+        >
+          For the Expected, Unexpected and Everything
+        </Typography>
+
+      </Box>
+
+
+      {/* Login Card */}
+
       <Paper
-        elevation={3}
+        elevation={6}
         sx={{
           padding: 4,
           width: 380,
-          borderRadius: 3
+          borderRadius: 3,
+          backdropFilter: "blur(8px)",
+          background: "rgba(255,255,255,0.92)"
         }}
       >
 
         <Box sx={{ textAlign: "center", mb: 3 }}>
 
-          <LockOutlinedIcon
+          {/* <LockOutlinedIcon
             sx={{
               fontSize: 40,
               color: "#1976d2"
             }}
-          />
+          /> */}
 
           <Typography
-            variant="h5"
+            variant="h6"
             fontWeight={700}
-            sx={{ mt: 1 }}
+            sx={{
+              mt: 1, color: "#1976d2",
+            }}
           >
             Aarambh Clinic
           </Typography>
 
-          <Typography variant="body2">
-            Doctor Login
-          </Typography>
-
         </Box>
-
 
         {error && (
           <Alert severity="error" sx={{ mb: 2 }}>
             {error}
           </Alert>
         )}
-
 
         <form onSubmit={handleLogin}>
 
@@ -142,18 +167,14 @@ export default function Login() {
             margin="normal"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-
             InputProps={{
               endAdornment: (
                 <InputAdornment position="end">
-
                   <IconButton
                     onClick={() => setShowPassword(!showPassword)}
                   >
                     {showPassword ? <VisibilityOff /> : <Visibility />}
-
                   </IconButton>
-
                 </InputAdornment>
               )
             }}
