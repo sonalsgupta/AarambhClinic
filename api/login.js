@@ -20,20 +20,16 @@ export default async function handler(req, res) {
 
     const db = await getDB();
 
-  const user = await db.get(
-  "SELECT * FROM users WHERE username = ?",
-  [username]
-);
+    const user = await db.get(
+      "SELECT * FROM users WHERE username = ?",
+      [username]
+    );
     if (!user) {
       return res.status(401).json({
         message: "User not found"
       });
     }
-
-    const passwordMatch = await bcrypt.compare(
-      password,
-      user.password
-    );
+    const passwordMatch = password === user.password;
 
     if (!passwordMatch) {
       return res.status(401).json({

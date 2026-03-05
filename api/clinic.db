@@ -5,4 +5,4 @@ CREATE TABLE users (
 );
 
 INSERT INTO users (username,password)
-VALUES ('Ritwick','Aarambh');
+VALUES ('Ritwick', 'Aarambh');
